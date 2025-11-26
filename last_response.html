@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro e Login Seguro com Flask</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    
+    <style>
+        /* Pequeno ajuste inline para cores de link: mantém simples sem tocar no CSS global */
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="layout">
+            <!-- Coluna da esquerda: Galeria de imagens (adicione imagens em static/images/) -->
+            <div class="left-column">
+                <div class="brand">Projeto de Cadastro</div>
+                <h1>Bem-vindo(a)!</h1>
+                <h5>Este e um sistema de abertura de contas simples . criado por Elias Dias</h5>
+                <p class="small-title"> </p>
+                <div class="gallery">
+                    <!-- Troque as URLs abaixo por imagens reais colocadas em static/images/ -->
+                    <img src="../static/images/site python.jpg" alt="" srcset="" width="300" height="200">
+                    <img src="../static/images/site teste py.jpeg" alt="" srcset="" width="300" height="200">
+                    <img src="../static/images/image testete py.jpeg" alt="" srcset="" width="300" height="200">
+                    <img src="../static/images/dsdsadas.jpeg" alt="" srcset="" width="300" height="200">
+                </div>   
+            </div>
+
+            <!-- Coluna da direita: formulários menores e empilhados -->
+            <div class="right-column">
+                
+                
+                
+                
+                    <!-- Caixa de login pequena no topo direito -->
+                    <div class="card login-small">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <div class="login-badge">Fazer Login</div>
+                            <div class="small-title">Já tem conta? Entre aqui.</div>
+                        </div>
+                        <form method="POST" action="/login">
+                            <div class="form-row">
+                                <input type="text" name="username" id="username_login" placeholder="Usuário" required />
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="password" id="password_login" placeholder="Senha" required />
+                            </div>
+                            <button type="submit" class="btn">Entrar</button>
+                        </form>
+                    </div>
+
+                    <!-- Formulário de Cadastro (tamanho menor e visual elegante) -->
+                    <div class="card">
+                        <div class="brand">Criar Conta</div>
+                        <p class="small-title">É rápido e gratis crie sua conta para acessar recursos restritos.</p>
+                        <form method="POST" action="/cadastrar">
+                            <div class="form-row">
+                                <input type="text" name="username" id="username" placeholder="Usuário" required />
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="password" id="password" placeholder="Senha" required />
+                            </div>
+                            <button type="submit" class="btn">Cadastrar</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Menu do painel removido por solicitação do usuário -->
+
+                    <!-- Bloco de Notícias (abaixo do acesso) -->
+                    <div class="card news-block">
+                        <h3>Notícias</h3>
+                        
+                        <div class="small-title">Publicação de notícias apenas para administradores.</div>
+                        
+                        <hr style="opacity:0.06; margin:12px 0;" />
+                        <div class="news-list">
+                            
+                                <div class="small-title">Nenhuma notícia publicada ainda.</div>
+                            
+                        </div>
+                    </div>
+                
+
+                <!-- Lista de usuários removida por solicitação do usuário -->
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Exclui a pasta do ambiente virtual
+venv/
+
+# Exclui o banco de dados local
+site.db
+
+# Exclui arquivos temporários do Python
+__pycache__/
+*.pyc
